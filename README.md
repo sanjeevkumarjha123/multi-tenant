@@ -11,6 +11,9 @@ Each user can create, manage, and switch between multiple companies under their 
 - Switch active company
 - Scoped data per active company
 - MySQL database with clean schema
+- Form validation with proper error messages
+- SweetAlert success/error notifications
+
 
 ---
 
@@ -47,38 +50,38 @@ Each user can create, manage, and switch between multiple companies under their 
    git clone https://github.com/sanjeevkumarjha123/multi-tenant.git <br>
    cd multi-tenant
 2. Install Dependencies
-   composer install
+
+   composer install<br>
    npm install
 3. Environment Setup
 
-   Copy .env.example to .env:
+   Copy .env.example to .env
 
-   cp .env.example .env
-
-
-   Update your .env file with correct values:
+   <b>Update your .env file with correct values:</b>
 
     APP_NAME="MultiTenant"
-    APP_ENV=local
-    APP_KEY=
-    APP_DEBUG=true
+    APP_ENV=local<br>
+    APP_KEY=<br>
+    APP_DEBUG=true<br>
     APP_URL=http://127.0.0.1:8000
 
     DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=your database name
-    DB_USERNAME=root
+    DB_HOST=127.0.0.1<br>
+    DB_PORT=3306<br>
+    DB_DATABASE=your database name<br>
+    DB_USERNAME=root<br>
     DB_PASSWORD=
 
 5. Run Database Migrations
+
     php artisan migrate
 
 6. Clear & Optimize Cache
-    php artisan config:clear
-    php artisan cache:clear
-    php artisan route:clear
-    php artisan view:clear
+
+    php artisan config:clear<br>
+    php artisan cache:clear<br>
+    php artisan route:clear<br>
+    php artisan view:clear<br>
     php artisan optimize
 
 7. Build Frontend Assets
